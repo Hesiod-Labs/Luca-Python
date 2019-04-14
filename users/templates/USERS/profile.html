@@ -1,0 +1,38 @@
+{% extends "USERS/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="content-section">
+      <div class="media">
+      <img class="mr-3" style="width: 128px; height: 128px" src={{ object.image.url }} >
+      <div class="media-body">
+       <h1 class="mt-0">{{ object.user.first_name }} {{ object.user.last_name }}</h1>
+          <h6>Username:</h6>
+          <p>{{ object.user.username }}</p>
+
+          <h6>Email:</h6>
+          <p>{{ object.user.email }}</p>
+
+          <h6>University:</h6>
+          <p>{{ object.university }}</p>
+
+          <h6>Major:</h6>
+          <p>{{ object.major }}</p>
+      </div>
+    </div>
+
+    {% if user.username == object.user.username %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Profile Info</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                 <button class ="btn btn-outline-info" type="submit">Update Info</button>
+            </div>
+        </form>
+    {% endif %}
+</div>
+{% endblock content %}
