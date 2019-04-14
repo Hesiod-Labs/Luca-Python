@@ -4,29 +4,39 @@ To anyone (at Hesiod or otherwise), welcome! This is the source code for the Luc
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+Your computer will need to have Python. A good explanation of how to do this is available on the [Python Website](python.org).
 
-Your computer will need to have Java installed. A good explanation of how to do this is available on the [Java Website](https://www.java.com/en/download/help/download_options.xml)
+From there, you will need to install a few packages. To handle the website framework, you will need to download Django.
 
-### Installing
+```
+$ pip install Django
+```
 
-You can find the most recent version of Luca at hesiodfinancial.com/Luca {This isn't real yet, just an idea}
+To handle the form tags used, install crispy-forms
 
-## Documentation
+```
+$ pip install --upgrade django-crispy-forms
+```
 
-See the Wiki files in the repository for a more in depth look at the roadmap of the project and the most recent documentation.
+And lastly to handle the images, you will need Pillow
+
+```
+$ pip install Pillow
+```
+
+If you intend to check testing and coverage, make sure to install coverage as well
+
+```
+$ pip install coverage
+```
 
 ## Built With
-
-Java backend developed with IntelliJ
 
 Python 3.6 with Django for Backend
 
 Bootstrap for Frontend
-
-Frontend wireframe design developed with Adobe XD
 
 ## Authors
 
@@ -38,7 +48,6 @@ Frontend wireframe design developed with Adobe XD
 * **Daniel Soares** - *Frontend Development Engineer* - [GitHub](https://github.com/HubMaster9000)
 * **Shaan Patel** - *Quality Assurance Engineer* - [GitHub](https://github.com/Coolsnail123)
 
-
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
@@ -47,5 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Anyone who helped us
 * A special thanks to Corey Shafer for in depth Django tutorials.
