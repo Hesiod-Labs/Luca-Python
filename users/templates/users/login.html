@@ -26,7 +26,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="{% static 'users/main.css' %}" rel="stylesheet">
+    <link href="{% static 'USERS/main.css' %}" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -48,6 +48,9 @@
         <div class="border-top pt-3">
             <small class="text-muted">
                 Need an Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+            <small class ="text-muted ml-2">
+                    <a href ="{% url 'password_reset' %}">Forgot Password?</a>
             </small>
         </div>
     </div>

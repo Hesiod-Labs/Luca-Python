@@ -15,7 +15,7 @@ class Profile(models.Model):
     # The university the user attends
     university = models.CharField(max_length=50, default="No University")
     # The user's major
-    major = models.CharField(max_length=20, default="Undecided")
+    contribution = models.IntegerField(max_length=20, default="Undecided")
 
     # Returns the path of the profile as a string
     def get_absolute_url(self):
