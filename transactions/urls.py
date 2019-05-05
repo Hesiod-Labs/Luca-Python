@@ -8,5 +8,5 @@ from transactions import views as transactions_views
 
 
 urlpatterns = [
-    path('home/', transactions_views.register, name='home'),
+    path('', transactions_views.home, name='home'),
 ]

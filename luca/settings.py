@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # TODO: Add installed APPS
+    'users.apps.UsersConfig',
+    'transactions.apps.TransactionsConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SOS.urls'
+ROOT_URLCONF = 'luca.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SOS.wsgi.application'
+WSGI_APPLICATION = 'luca.wsgi.application'
 
 
 # Database

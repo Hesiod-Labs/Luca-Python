@@ -16,7 +16,7 @@ class UserRegisterForm(UserCreationForm):
     # The user's university
     university = forms.CharField(max_length=50, required=True)
     # The user's contribution
-    contribution = forms.IntegerField(max_length=5, required=True)
+    contribution = forms.IntegerField(required=True)
 
     # Specifies the model which will be impacted by the form
     class Meta:
@@ -40,7 +40,7 @@ class UserUpdateForm(forms.ModelForm):
 # Form for updating the profile sections of the profile
 class ProfileUpdateForm(forms.ModelForm):
     university = forms.CharField(max_length=50, required=True)
-    major = forms.IntegerField(max_length=20, required=False)
+    contribution = forms.IntegerField(required=False)
 
     # The Profile model will be impacted
     class Meta:

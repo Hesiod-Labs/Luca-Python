@@ -14,8 +14,8 @@ class Profile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     # The university the user attends
     university = models.CharField(max_length=50, default="No University")
-    # The user's major
-    contribution = models.IntegerField(max_length=20, default="Undecided")
+    # The user's contrib
+    contribution = models.IntegerField(default=0)
 
     # Returns the path of the profile as a string
     def get_absolute_url(self):

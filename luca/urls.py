@@ -46,6 +46,7 @@ urlpatterns = [
              template_name='users/password_reset_complete.html'
          ),
          name='password_reset_complete'),
+    path('', include('transactions.urls'))
 ]
 
 if settings.DEBUG:
